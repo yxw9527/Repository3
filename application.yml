@@ -4,7 +4,6 @@ server:
   servlet:
     context-path: /
 spring:
-  profiles: prod        #定义为生产环境
   datasource:
     #引入druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
@@ -12,6 +11,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
     password: tarena
+  profiles: prod        #定义为生产环境
   application:   #定义服务名称
     name: provider-user
 eureka:
@@ -34,7 +34,6 @@ server:
   servlet:
     context-path: /
 spring:
-  profiles: dev        #定义为研发环境
   datasource:
     #引入druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
@@ -42,6 +41,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
     password: tarena
+  profiles: dev        #定义为研发环境
   application:   #定义服务名称
     name: provider-user
 eureka:
